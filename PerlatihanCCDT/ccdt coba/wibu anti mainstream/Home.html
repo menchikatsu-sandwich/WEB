@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- End Font Awesome -->
+
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- End Tailwind CSS -->
+
+    <!-- CDN AOS  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- End CDN AOS  -->
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./src/assets/img/Gradasi logo.png">
+    <!-- End Favicon -->
+
+    <!-- Google Fonts Poppins-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- End Google Fonts Poppins -->
+
+    <style>
+        /* Font */
+        nav {
+            font-family: 'Poppins', sans-serif;
+        }
+        footer {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* End Font */
+
+        /* Navbar */
+        .navbar {
+            transition: background-color 0.3s;
+        }
+        .bg-transparent {
+            background-color: transparent;
+        }
+        .bg-colored {
+            background: linear-gradient(to right, #60a5fa, #3b82f6, #2563eb);
+            --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        }
+        .nav-link {
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: currentColor;
+            transition: width 0.3s, transform 0.3s;
+            transform: translateX(-50%); 
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        /* End Navbar */
+
+        /* Animasi Color */
+        .hover-cyan:hover {
+            color: #E0FFFF;
+        }
+        .hover-lightblue:hover {
+            color: #ADD8E6;
+        }
+        .hover-lightgreen:hover {
+            color: #90EE90;
+        }
+        .hover-lightyellow:hover {
+            color: #FFFFE0;
+        }
+        .hover-lavender:hover {
+            color: #E6E6FA;
+        }
+        .hover-Yelowww:hover {
+            color: #FFD700;
+        }
+        /* End Animasi Color */
+
+        /* Hero */
+        .hero-bg {
+            background: url('./src/assets/img/wallpaperflare.com_wallpaper.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        /* End Hero */
+    </style>
+    <title>Pariwisata Bali</title>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar" class=" fixed top-0 w-full flex justify-between px-24 py-1 bg-transparent">
+        <div class="items-center flex space-x-2">
+            <img class="w-16 h-auto" src="./src/assets/img/Gradasi logo.png" alt="">
+            <div class=" font-bold text-2xl pr-5">
+                <span class="text-white ">Pariwisata</span><span class="text-yellow-300">BALI</span>
+            </div>
+            <div class="space-x-12 pl-8 font-semibold">
+                <a href="Home.html" class="nav-link text-white hover-Yelowww">HOME</a>
+                <a href="Destination.html" class="nav-link text-white hover-Yelowww">DESTINATION</a>
+                <a href="About us.html" class="nav-link text-white hover-Yelowww">ABOUT US</a>
+            </div>
+        </div>
+        <div class="items-center flex font-semibold space-x-3">
+            <a href="tel:081234567890" class="text-white hover-Yelowww">(+62) 812 3456 7890</a>
+            <a href="#" class="text-white space-x-1 hover-Yelowww ">
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Hero Section -->
+    <section class="hero-bg h-screen flex items-center justify-center">
+        <div class="hero-overlay"></div>
+        <div class="hero-content text-center text-white">
+            <p class="text-lg italic">Natural beauty</p>
+            <h2 class="text-4xl font-semibold">Discover the most engaging places</h2>
+            <a href="#" class="mt-6 inline-block bg-blue-500 text-white py-3 px-6 rounded-full hover:bg-blue-700">Explore Now</a>
+        </div>
+    </section>
+    <!-- End Hero Section -->
+
+    <!-- Home -->
+
+    <!-- End Home -->
+    
+    <!-- Footer -->
+    <footer class="footer bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-white text-xl font-semibold mb-2">Contact Us</h3>
+                    <p class="text-white">Jimbaran, Kec. Kuta Selatan, Kab Badung, Bali</p>
+                    <p class="text-white">Email: info@pariwisatabali.com</p>
+                    <p class="text-white">Phone: (+62) 812 3456 7890</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-xl font-semibold mb-2">Quick Links</h3>
+                    <ul>
+                        <li><a href="Home.html" class="text-white hover-Yelowww">Home</a></li>
+                        <li><a href="Destination.html" class="text-white hover-Yelowww">Destination</a></li>
+                        <li><a href="About us.html" class="text-white hover-Yelowww">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-xl font-semibold mb-2">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover-Yelowww"><i class="fab fa-facebook"></i> Facebook</a>
+                        <a href="#" class="text-white hover-Yelowww"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="#" class="text-white hover-Yelowww"><i class="fab fa-twitter"></i> Twitter</a>
+                        <a href="#" class="text-white hover-Yelowww"><i class="fab fa-youtube"></i> YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-white pt-4">
+                <p class="text-center text-white">&copy; 2024 Pariwisata Bali. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- CDN AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- end CDN AOS -->
+
+    <!-- Navbar -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.remove('bg-transparent');
+                navbar.classList.add('bg-colored');
+            } else {
+                navbar.classList.remove('bg-colored');
+                navbar.classList.add('bg-transparent');
+            }
+        });
+    </script>
+    <!-- Navbar -->
+</body>
+</html>

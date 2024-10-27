@@ -1,0 +1,4 @@
+Primary (Warna Utama) : ##0e151b
+Secondary (Warna Pendukung) : #5F1BBB
+White : #F8F9FA
+Hitam : #19242E

@@ -1,0 +1,432 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: none;
+  font-family: "Poppins";
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0e151b;
+  overflow-x: hidden;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  background-color: #0e151b;
+  transition: all .2s ease;
+}
+
+.pembungkus-konten {
+  margin: auto;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 5px;
+}
+
+.logo {
+  width: 5%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  margin-left: 110px;
+}
+
+.menu a {
+  color: #F8F9FA;
+  font-weight: 500;
+  margin-inline: 10px;
+}
+
+.menu a:hover {
+  color: #5F1BBB;
+  transition: color .2s ease-in-out;
+  transform: scale(0.95);
+}
+
+.login {
+  background-color: #5F1BBB;
+  color: #F8F9FA;
+  padding: 5px 40px;
+  border-radius: 35px;
+}
+
+.login:hover {
+  transition: all .3s ease-in-out;
+  transform: scale(0.95);
+}
+
+/* hero section */
+
+.hero {
+  margin-top: 60px;
+}
+
+.bagian-utama {
+  width: 93%;
+  padding: 10px;
+  margin: 0px auto 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bagian-utama .deskripsi {
+  padding: 15px;
+  width: 55%;
+}
+
+.bagian-utama .deskripsi h4 {
+  color: #F8F9FA;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.bagian-utama .deskripsi h2 {
+  color: #F8F9FA;
+  font-weight: 600;
+  font-size: 45px;
+}
+
+
+.bagian-utama .deskripsi h5 {
+  color: #F8F9FA;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 50px;
+}
+
+.gambar-hero {
+  width: 70%;
+  overflow: hidden;
+  position: relative;
+}
+
+.gambar-hero img {
+  width: 100%;
+}
+
+.tombol-hero {
+  background-color: #5F1BBB;
+  width: 280px;
+  padding-block: 10px;
+  border-radius: 35px;
+  display: flex;
+  align-items: center;
+}
+
+.tombol-hero a {
+  color: #F8F9FA;
+  margin-inline: 40px;
+}
+
+.tombol-hero i {
+  background-color: #F8F9FA;
+  color: #5F1BBB;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.tombol-hero:hover {
+  transition: all .3s ease-in-out;
+  transform: scale(0.95);
+}
+
+.bagian-pendukung p {
+  color: #F8F9FA;
+  padding: 20px;
+  font-style: italic;
+  font-weight: 500;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 90px;
+}
+
+/* divisi */
+.divisi .section-divisi{
+  font-weight: 800;
+  font-size: 35px;
+  color:#F8F9FA ;
+  margin-top: 130px;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.divisi .section-divisi-pendukung{
+  font-weight: 400;
+  margin: auto;
+  padding-block: 50px;
+  color: #F8F9FA;
+  width: 45%;
+  text-align: center;
+}
+
+.bagian-utama-divisi{
+  width: 65%;
+  padding-top: 30px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card-divisi{
+  border: 2px solid #F8F9FA;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 5px;
+  width: 330px;
+  height: 300px;
+  position: relative;
+}
+
+.logo-divisi{
+  background-color: #F8F9FA;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  position: absolute;
+  top: -50px;
+  left: 115px;
+  color: #333;
+}
+
+.nama-divisi{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-weight: 500;
+  font-size: 10px;
+  color: #F8F9FA;
+  padding-inline: 10px;
+}
+
+.card-divisi:hover{
+  transition: all .4s ease-in-out;
+  transform: scale(1.05);
+}
+
+/* PROKER */
+.proker{
+  margin-top: 100px;
+  padding: 10px;
+}
+
+.section-proker{
+  font-weight: 800;
+  font-size: 35px;
+  color: #F8F9FA;
+  padding-top: 130px;
+  text-align: center;
+}
+
+.section-proker-pendukung{
+  font-weight: 400;
+  padding-block: 30px;
+  color: #F8F9FA;
+  text-align: center;
+  width: 45%;
+  margin: auto;
+}
+
+.bagian-proker{
+  width: 93%;
+  margin: auto;
+}
+
+.card-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  margin-block: 80px;
+}
+
+.card{
+  color: #F8F9FA;
+  border: 2px solid #F8F9FA;
+  width: 360px;
+  position: relative;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.logo-proker{
+  position: absolute;
+  background-color: #F8F9FA;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  top: -50px;
+  left: 145px;
+}
+
+.logo-proker img{
+  width: 80%;
+}
+
+.nama-proker{
+  margin: 95px 0 20px;
+  text-align: center;
+}
+
+.deskripsi-proker{
+  text-align: justify;
+  padding: 15px;
+}
+
+.card:hover{
+  transition: all .4s ease-in-out;
+  transform: scale(1.05);
+}
+
+/* FUNGSIO */
+.bagian-fungsio{
+  width: 93%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.deskripsi-fungsio{
+  width: 45%;
+  padding: 30px;
+}
+
+.deskripsi-fungsio h2{
+  color: #F8F9FA;
+  font-size: 40px;
+}
+
+.deskripsi-fungsio h5{
+  color: #F8F9FA;
+  padding-bottom: 20px;
+}
+
+.gambar-fungsio{
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gambar-fungsio img{
+  width: 150%;
+}
+
+.tombol-fungsio {
+  background-color: #5F1BBB;
+  width: 250px;
+  padding-block: 8px;
+  border-radius: 34px;
+  display: flex;
+  align-items: center;
+}
+
+.tombol-fungsio a {
+  color: #F8F9FA;
+  margin-inline: 30px;
+}
+
+.tombol-fungsio i {
+  background-color: #F8F9FA;
+  color: #5F1BBB;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.tombol-fungsio:hover {
+  transition: all .2s ease;
+  transform: scale(0.95);
+}
+
+footer{
+  background-color: #19242E;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.copyright{
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px;
+  color: #F8F9FA;
+}
+
+.sosmed{
+  width: 235px;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  font-size: 28px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  border-bottom: 3px solid #F8F9FA;
+}
+
+.sosmed a{
+  color: #F8F9FA;
+}
+
+.ig:hover{
+  transition: all .2s ease-in-out;
+  transform: scale(0.95);
+  background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tt:hover{
+  transition: all .2s ease-in-out;
+  transform: scale(0.95);
+  color: #111111;
+  filter: drop-shadow(2px 0px 0px #FD3E3E) drop-shadow(-2px -2px 0px #4DE8F4);
+}
+
+.yt:hover{
+  transition: all .2s ease-in-out;
+  transform: scale(0.95);
+  color: red;
+}
+
+.linked:hover{
+  transition: all .2s ease-in-out;
+  transform: scale(0.95);
+  color: #04669A;
+}

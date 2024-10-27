@@ -1,0 +1,5 @@
+.satu, .dua, .tiga, .empat{
+    box-shadow: -8px 6px 0px 1px rgba(13,13,13,0.48);
+    -webkit-box-shadow: -8px 6px 0px 1px rgba(13,13,13,0.48);
+    -moz-box-shadow: -8px 6px 0px 1px rgba(13,13,13,0.48);
+}

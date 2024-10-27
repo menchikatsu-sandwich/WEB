@@ -1,0 +1,182 @@
+.page-header {
+    background-image: url('../img/Alun-Alun-Tugu-Malang.webp');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.mobile-menu {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+main {
+    padding: 4rem 0;
+}
+
+section {
+    padding-top: 40px;
+    margin-bottom: 4rem;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding-top: 40px;
+    }
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.destination-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.destination-card h3 {
+    padding: 1rem;
+    text-align: center;
+}
+
+.destination-card p {
+    padding: 0 1rem 1rem;
+    text-align: center;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .destination-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+    .page-header {
+        height: 200px;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        padding: 2rem 0;
+    }
+
+    section {
+        padding-top: 40px;
+        margin-bottom: 2rem;
+    }
+
+    .destination-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .destination-card img {
+        height: 150px;
+    }
+
+    .destination-card h3 {
+        padding: 0.5rem;
+    }
+
+    .destination-card p {
+        padding: 0 0.5rem 0.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1920px) {
+    .page-header {
+        height: 400px;
+    }
+
+    .page-header h1 {
+        font-size: 4rem;
+    }
+
+    main {
+        padding: 6rem 0;
+    }
+
+    section {
+        padding-top: 40px;
+        margin-bottom: 6rem;
+    }
+
+    .destination-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 3rem;
+        padding: 0 3rem;
+    }
+
+    .destination-card img {
+        height: 250px;
+    }
+
+    .destination-card h3 {
+        padding: 1.5rem;
+    }
+
+    .destination-card p {
+        padding: 0 1.5rem 1.5rem;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}

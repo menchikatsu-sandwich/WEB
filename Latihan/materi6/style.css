@@ -1,0 +1,77 @@
+html {
+    background-color: grey;
+}
+
+.navbar a{
+    color: black;
+    background-color: white;
+    width: 300px;
+    height: 200px;
+}
+
+img {
+    width: 300px;
+    height: 200px;
+}
+
+.container {
+    border: 1px solid black;
+}
+
+.container h1{
+    background-color: white;
+    display: inline-block;
+    height: 10vh;
+    width: 60vh;
+}
+
+.kotak {
+    background-color: white;
+    width: 300px;
+    height: 150px;
+    overflow: auto;
+}
+.kotak p{
+    width: 80%;
+}
+
+.pembungus {
+    margin-left: 30px;
+    position: relative;
+}
+
+div {
+    width: 200px;
+    height: 150px;
+}
+.satu {
+    background-color: red;
+}
+.dua {
+    background-color: orange;
+    position: fixed;
+    right: 100px;
+    bottom: 35%;
+}
+.tiga {
+    background-color: yellow;
+    z-index: inherit;
+}
+.empat {
+    background-color: green;
+    position: relative;
+    left: 150px;
+    bottom: 25px;
+}
+.lima {
+    background-color: blue;
+}
+.enam {
+    background-color: blueviolet;
+    position: relative;
+    left: 150px;
+    bottom: 25px;
+}
+.tujuh {
+    background-color: purple;
+}

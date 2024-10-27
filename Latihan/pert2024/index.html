@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .container{
+            border: 10px solid;
+            display: flex;
+            /* flex-direction: row; */
+            /* flex-wrap: wrap; */
+            /* justify-content:space-around; */
+            height: 200px;
+            align-items: stretch;
+        }
+        .container1{
+            border: 10px solid;
+            display: flex;
+            flex-direction: column;
+            /* flex-wrap: wrap; */
+            height: 200px;
+            /* justify-content:space-between; */
+            align-items: flex-end;
+        }
+        .container2{
+            border: 10px solid;
+            display: flex;
+            /* flex-direction: row; */
+            /* flex-wrap: wrap; */
+            /* justify-content:space-evenly; */
+            height: 200px;
+            align-items: flex-end;
+        }
+
+        .satu, .dua, .tiga, .empat{
+            background-color: aqua;
+            /* height: 100px; */
+            width: 100px;
+            margin: 10px;
+        }
+    </style>
+</body>
+    <div class="container">
+        <div class="satu">1</div>
+        <div class="dua">2</div>
+        <div class="tiga">3</div>
+        <div class="empat">4</div>
+    </div>
+    <div class="container1">
+        <div class="satu">1</div>
+        <div class="dua">2</div>
+        <div class="tiga">3</div>
+        <div class="empat">4</div>
+    </div>
+    <div class="container2">
+        <div class="satu">1</div>
+        <div class="dua">2</div>
+        <div class="tiga">3</div>
+        <div class="empat">4</div>
+    </div>
+</html>

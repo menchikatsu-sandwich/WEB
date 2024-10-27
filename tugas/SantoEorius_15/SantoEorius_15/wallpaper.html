@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Wallpaper</title>
+        <link rel="stylesheet" href="style.css" />
+        <link href="https://fonts.cdnfonts.com/css/ds-digital" rel="stylesheet">
+        <style>
+            @import url('https://fonts.cdnfonts.com/css/ds-digital');
+        </style>
+    </head>
+    <body>
+        <div>
+            <p id="dateTime"></p>
+            <p id="jam"></p>
+        </div>
+
+
+
+    <script>
+        function updateDateTime() {
+            const dateTimeElement = document.getElementById('dateTime');
+            const TimeElement = document.getElementById('jam');
+            const now = new Date();
+
+            const options = {
+                weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+            };
+
+            const optionsTime = {
+                hour: '2-digit', minute: '2-digit', second: '2-digit'
+            };
+
+            const formattedDateTime = now.toLocaleDateString('en-US', options);
+            const formattedTime = now.toLocaleTimeString('en-US', optionsTime);
+
+            dateTimeElement.textContent = formattedDateTime;
+            TimeElement.textContent = formattedTime;
+        }
+
+        // Update every second
+        setInterval(updateDateTime, 1000);
+
+        // Initial call to display immediately
+        updateDateTime();
+    </script>
+    </body>
+</html>

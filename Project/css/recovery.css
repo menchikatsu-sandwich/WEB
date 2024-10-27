@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Quicksand', sans-serif;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #5F1BBB;
+}
+section {
+	position: absolute;
+	width: 98vw;
+	height: 97vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2px;
+	flex-wrap: wrap;
+	overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px;
+}
+section::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #111;
+}
+
+section .card {
+	position: absolute;
+	width: 400px;
+    background: #222;  
+	z-index: 1000;
+	padding: 40px;
+	border-radius: 4px;
+	box-shadow: 0 15px 35px rgba(0,0,0,9);
+}
+section .card .gambar img {
+    margin-left: 63px;
+}
+
+section .card .bungkus-content{
+	position: relative;
+	width: 100%;
+	display: grid;
+	gap: 40px;
+	/* animation: animate 5s linear infinite; */
+}
+section .card .bungkus-content h2 {
+	font-size: 2em;
+	color: #F8F9FA;
+	text-transform: uppercase;
+    text-align: center;
+}
+section .button-back{
+    background-color: #5F1BBB;
+    margin: 0 auto;
+    display: block;
+    width: 180px;
+    padding-block: 8px;
+    border-radius: 35px;
+}
+section .button-back a {
+    color: #F8F9FA;
+    margin-inline: 30px;
+    text-decoration: none;
+  }
+  
+section .button-back i {
+    background-color: #F8F9FA;
+    color: #5F1BBB;
+    border-radius: 50%;
+    padding: 8px;
+    margin-left: 5px;
+  }
+
+section .button-back:hover {
+    transition: all .3s ease-in-out;
+    transform: scale(0.95);
+  }

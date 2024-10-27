@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CDN Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- End Font Awesome -->
+
+    <!-- CLI Tailwind CSS -->
+    <link href="/src/assets/css/output.css" rel="stylesheet">
+    <!-- End Tailwind CSS -->
+
+    <!-- CDN AOS  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- End CDN AOS  -->
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/src/assets/img/Gradasi logo.png">
+    <!-- End Favicon -->
+
+    <!-- Google Fonts Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> 
+    <!-- End Google Fonts Poppins -->
+
+    <!-- css -->
+        <style>
+            /* Scrolling page */
+            *{
+                scroll-behavior: smooth;
+            }
+            /* End Scrolling page */
+
+            /* Font */
+            body {
+                font-family: 'Poppins', sans-serif;
+            }
+            /* End Font */
+
+            /* Navbar */
+            .nav-index {
+                z-index: 999;
+            }
+            .navbar {
+                transition: background-color 0.3s;
+            }
+            .bg-transparent {
+                background-color: transparent;
+            }
+            .bg-colored {
+                background: linear-gradient(to right, #60a5fa, #3b82f6, #2563eb);
+                --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+                --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+                box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+            }
+            .nav-link {
+                position: relative;
+                padding-bottom: 0.5rem;
+            }
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                width: 0;
+                height: 2px;
+                background-color: currentColor;
+                transition: width 0.3s, transform 0.3s;
+                transform: translateX(-50%); 
+            }
+            .nav-link:hover::after {
+                width: 100%;
+            }
+            /* End Navbar */
+
+            /* Animasi Color */
+            .hover-Yelowww:hover {
+                color: #FFD700;
+            }
+            /* End Animasi Color */
+
+            /* Efek */
+            .hover-scaleee:hover {
+                transform: scale(1.05);
+                transition: transform .4s ease-in-out;
+            }
+            /* end Efek */
+
+            /* Hero */
+            .hero-bg {
+                background: url('/src/assets/img/wallpaperflare.com_wallpaper.jpg') no-repeat center center;
+                background-size: cover;
+            }
+            /* End Hero */
+
+            /* Button */
+            .btn-scale {
+                transition: transform 0.3s ease;
+            }
+            .btn-scale:hover {
+                transform: scale(0.95);
+            }
+            /* End Button */
+
+            /* Contact Us */
+            #close-contact {
+                transition: background-color 0.3s ease;
+            }
+            #close-contact:hover {
+                background-color: transparent;
+            }
+            /* end Contact Us */
+        </style>
+    <!-- end css -->
+
+    <title>Pariwisata Bali</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar" class=" fixed top-0 w-full flex justify-between px-24 py-1 bg-transparent nav-index">
+        <div class="items-center flex space-x-2">
+            <img class="w-16 h-auto" src="/src/assets/img/Gradasi logo.png" alt="Logo">
+            <div class=" font-bold text-2xl pr-5">
+                <span class="text-white ">Pariwisata</span><span class="text-yellow-300">BALI</span>
+            </div>
+            <div class="space-x-12 pl-8 font-semibold">
+                <a href="Home.html" class="nav-link text-white hover-Yelowww">HOME</a>
+                <a href="Destination.html" class="nav-link text-white hover-Yelowww">DESTINATION</a>
+                <a href="Culture.html" class="nav-link text-white hover-Yelowww">CULTURE</a>
+                <a href="Culinary.html" class="nav-link text-white hover-Yelowww">CULINARY</a>
+                <a href="About us.html" class="nav-link text-white hover-Yelowww">ABOUT US</a>
+            </div>
+        </div>
+        <div class="items-center flex font-semibold space-x-3 pt-2">
+            <a href="tel:081234567890" class="text-white hover-Yelowww nav-link">(+62) 812 3456 7890</a>
+            <a href="#" id="contact-link" class="text-white space-x-1 hover-Yelowww nav-link ">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </div>
+    </nav>
+    <div id="contact-card-container" class="fixed top-0 right-0 mt-16 mr-4 bg-emerald-500 p-6 rounded-lg shadow-lg hidden w-80 nav-index">
+        <button id="close-contact" class="text-white absolute top-0 right-0 mt-2 mr-2 w-8 h-8 flex items-center justify-center">&times;</button>
+        <div class="flex flex-col items-center">
+            <img src="/src/assets/img/Gradasi logo.png" alt="Profile" class="rounded-full mb-4">
+            <h2 class="text-white text-xl font-bold mb-2">Contact Us</h2>
+            <div class="text-white w-full text-justify">
+                <p class="mb-2"><strong>Email:</strong> info@pariwisatabali.com</p>
+                <p class="mb-2"><strong>Phone:</strong> (+62) 812 3456 7890</p>
+                <p class="mb-2"><strong>Alamat:</strong> Jimbaran, Kec. Kuta Selatan, Kab. Badung, Bali</p>
+                <p class="mb-4"><strong>Jam Operasional:</strong> Senin-Jumat, 9:00-17:00 WITA</p>
+            </div>
+        </div>
+    </div>
+    <!-- End Navbar -->
+
+    <!-- Hero Section -->
+    <section class="hero-bg h-screen flex items-center justify-center relative">
+        <div class="absolute inset-0 bg-black bg-opacity-25"></div>
+        <div class="relative z-10 hero-content text-center">
+            <p class="text-yellow-300 font-semibold text-lg italic">Natural beauty Bali</p>
+            <h2 class="text-white text-4xl font-bold">Discover the most engaging places</h2>
+            <a href="#home" class="mt-6 inline-block bg-emerald-500 text-white py-3 px-6 rounded-full hover:bg-emerald-600 btn-scale">
+                Explore Now
+                <i class="pl-2 fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+    <!-- End Hero Section -->
+
+    <!-- Home -->
+    <section id="home" class="pt-24 pb-8 px-4">
+        <div class="container mx-auto">
+            <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom" class="text-5xl font-bold text-center mb-8">Welcome to Pariwisata Bali</h2>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom" class="text-center text-lg text-gray-700 leading-relaxed">
+                Bali merupakan destinasi wisata sempurna berkat cuacanya yang bagus dan fakta bahwa pulau ini dipenuhi objek wisata menarik dan aktivitas yang tak boleh dilewatkan. Faktanya, mustahil untuk mengunjungi semua tempat wisata terbaik di Bali dalam sekali perjalanan! Namun, Anda bisa saja mengunjungi banyak tempat wisata sekaligus yang jaraknya berdekatan dengan tempat Anda menginap. Plus, monumen utama lainnya yang ingin Anda lihat, bisa saja dilakukan dalam perjalanan wisata sehari. Mulai dari belanja di Seminyak, bersantai di Pantai Lovina, hingga mengunjungi monumen budaya di sekitar Ubud, Anda tidak akan kehabisan tempat wisata untuk dikunjungi di Bali.  
+            </p>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-bottom" class="mt-8 flex flex-col md:flex-row items-center justify-center">
+                <img src="/src/assets/img/ayadi-ghaith-GiiCMdRLAZY-unsplash-scaled.jpg" alt="Garuda Wisnu Kencana" class="rounded-xl w-1/2">
+                <div class="mt-8 md:mt-0 md:ml-8 p-4  w-full md:w-1/2 lg:w-2/4 text-justify">
+                    <h2 class="text-2xl font-semibold mb-4">Garuda Wisnu Kencana: Ikon Kemegahan Bali</h2>
+                    <p class="text-lg">
+                        Garuda Wisnu Kencana (GWK) adalah salah satu destinasi wisata paling ikonik di Bali, terkenal dengan patung raksasa Dewa Wisnu yang menunggangi Garuda. Patung ini berdiri megah di kawasan Taman Budaya GWK, yang menawarkan pemandangan spektakuler dan pengalaman budaya yang mendalam.
+                    </p>
+                    <p class="mt-4 text-lg">
+                        Dengan tinggi mencapai 121 meter, patung GWK adalah salah satu yang tertinggi di dunia, melambangkan keberanian, kebijaksanaan, dan perlindungan. Lokasi ini sering menjadi pusat berbagai acara seni dan budaya, menjadikannya tempat yang wajib dikunjungi bagi wisatawan yang ingin merasakan esensi Bali yang sesungguhnya.
+                    </p>
+                    <p class="mt-4 text-lg">
+                        Mengunjungi GWK tidak hanya menawarkan keindahan arsitektur yang luar biasa, tetapi juga memberikan wawasan tentang mitologi dan tradisi Bali yang kaya. Dengan pemandangan yang memukau, terutama saat matahari terbenam, GWK menjadi simbol kebanggaan Bali yang tidak boleh dilewatkan.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-bottom" class="mt-12 flex flex-col md:flex-row items-center justify-center">
+                <div class="mt-8 md:mt-0 md:mr-8 p-4  w-full md:w-1/2 lg:w-2/4 text-justify">
+                    <h2 class="text-2xl font-semibold mb-4">Tari Kecak: Keajaiban Budaya Bali</h2>
+                    <p class="text-lg">
+                        Tari Kecak adalah salah satu tarian tradisional yang paling terkenal di Bali. Tarian ini menggambarkan kisah epik Ramayana dan dilakukan oleh puluhan pria yang duduk melingkar sambil melantunkan "cak" berulang kali, menciptakan irama yang memukau.
+                    </p>
+                    <p class="mt-4 text-lg">
+                        Tidak ada alat musik yang digunakan dalam tarian ini, hanya suara manusia yang bergema harmonis, menambah keunikan dan daya tarik pertunjukan. Tari Kecak sering kali dipentaskan di lokasi-lokasi ikonik seperti Pura Uluwatu saat matahari terbenam, memberikan pengalaman magis dan pemandangan yang menakjubkan.
+                    </p>
+                    <p class="mt-4 text-lg">
+                        Mengunjungi Bali tidak lengkap tanpa menyaksikan keindahan dan keagungan Tari Kecak, yang menjadi salah satu simbol budaya Bali yang kaya dan beragam.
+                    </p>
+                </div>
+                <img src="/src/assets/img/mauro-fabio-cilurzo-HRIOPiwqpmw-unsplash.jpg" alt="Tari Kecak di Bali" class="rounded-xl w-1/2">
+            </div>
+        </div>
+        <div class="container mx-auto">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-bottom" class="mt-12 flex flex-col md:flex-row items-center justify-center">
+                <img src="/src/assets/img/babi.jpg" alt="Babi Guling" class="rounded-xl w-1/2">
+                <div class="mt-8 md:mt-0 md:ml-8 p-4  w-full md:w-1/2 lg:w-2/4 text-justify">
+                    <h2 class="text-2xl font-semibold mb-4">Babi Guling: Kelezatan Kuliner Bali yang Autentik</h2>
+                    <p class="text-lg">
+                        Babi Guling adalah salah satu hidangan khas Bali yang paling terkenal dan dicari oleh wisatawan. Hidangan ini terdiri dari babi yang dipanggang utuh dengan bumbu rempah-rempah Bali yang khas, menghasilkan kulit yang renyah dan daging yang lembut serta penuh cita rasa.
+                    </p>
+                    <p class="mt-4 text-lg">
+                        Proses pembuatan Babi Guling melibatkan pemanggangan lambat selama beberapa jam, di mana bumbu seperti kunyit, serai, lengkuas, dan bawang putih meresap ke dalam daging, memberikan aroma dan rasa yang tak tertandingi. Hidangan ini biasanya disajikan dengan nasi, lawar (campuran sayuran dan daging), serta sambal matah yang pedas dan segar.
+                    </p>
+                    <p class="mt-4 text-lg">
+                        Babi Guling dapat ditemukan di berbagai warung dan restoran di Bali, namun beberapa tempat seperti di daerah Ubud dan Gianyar terkenal menyajikan versi yang paling autentik. Mengunjungi Bali tidak lengkap tanpa mencoba kelezatan Babi Guling, yang merupakan salah satu simbol kuliner tradisional Bali yang kaya dan beragam.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Home -->
+
+    <!-- Destination -->
+    <section class="py-12 px-4">
+        <div class="container mx-auto">
+            <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom" class="text-5xl font-bold text-center mb-8">Explore Beautiful Destinations in Bali</h2>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom" class="flex flex-col items-center justify-center md:flex-row md:justify-between">
+                <!-- GWK -->
+                <div class="w-full md:w-1/3 p-4 hover-scaleee">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="/src/assets/img/ayadi-ghaith-GiiCMdRLAZY-unsplash-scaled.jpg" alt="Garuda Wisnu Kencana" class="w-full h-56 object-cover">
+                        <div class="p-4 text-center">
+                            <h2 class="text-xl font-semibold">Garuda Wisnu Kencana</h2>
+                            <p class="text-gray-600">Badung</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- kelingking beach -->
+                <div class="w-full md:w-1/3 p-4 hover-scaleee">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="/src/assets/img/shravan-yelburgi-5sTqMLPblXE-unsplash.jpg" alt="Kelingking Beach" class="w-full h-56 object-cover">
+                        <div class="p-4 text-center">
+                            <h2 class="text-xl font-semibold">Kelingking Beach</h2>
+                            <p class="text-gray-600">Nusa Penida</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pura Ulun Danu Tamblingan -->
+                <div class="w-full md:w-1/3 p-4 hover-scaleee">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="/src/assets/img/irfan-maulidi-bHEcos0iSRc-unsplash.jpg" alt="Pura Ulun Danu Tamblingan" class="w-full h-56 object-cover">
+                        <div class="p-4 text-center">
+                            <h2 class="text-xl font-semibold">Pura Ulun Danu Tamblingan</h2>
+                            <p class="text-gray-600">Buleleng</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom" class="flex flex-col items-center justify-center md:flex-row md:justify-between">
+                <!-- Pura Penataran Agung Lempuyang-->
+                <div class="w-full md:w-1/3 p-4 hover-scaleee">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="/src/assets/img/Pura_Penataran_Agung_Lempuyang.width-800.format-webp.webp" alt="Pura Penataran Agung Lempuyang" class="w-full h-56 object-cover">
+                        <div class="p-4 text-center">
+                            <h2 class="text-xl font-semibold">Pura Penataran Agung Lempuyang</h2>
+                            <p class="text-gray-600">Karangasem</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pandawa Beach -->
+                <div class="w-full md:w-1/3 p-4 hover-scaleee">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="/src/assets/img/PDW-1000x640.jpg" alt="Pantai Pandawa" class="w-full h-56 object-cover">
+                        <div class="p-4 text-center">
+                            <h2 class="text-xl font-semibold">Pandawa Beach</h2>
+                            <p class="text-gray-600">Badung</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Goa Gajah -->
+                <div class="w-full md:w-1/3 p-4 hover-scaleee">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="/src/assets/img/Explore-the-ancient-Goa-Gajah-Elephant-Cave-near-Ubud.jpg" alt="Goa Gajah" class="w-full h-56 object-cover">
+                        <div class="p-4 text-center">
+                            <h2 class="text-xl font-semibold">Goa Gajah</h2>
+                            <p class="text-gray-600">Gianyar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom" class="text-center mt-2">
+                <a href="Destination.html" class=" inline-block bg-emerald-500 text-white py-3 px-6 rounded-full hover:bg-emerald-600 btn-scale">
+                    Lihat Selengkapnya
+                    <i class="pl-2 fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- End Destination -->
+    
+    <!-- Culture -->
+    <section class="pt-14 pb-12 px-4">
+        <div class="container mx-auto">
+            <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom" class="text-5xl font-bold text-center mb-8">Explore The Cultural Beauty of Bali</h2>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom" class="flex flex-col items-center justify-center md:flex-row md:justify-between">
+                <!-- Ngaben -->
+                <div class="w-full md:w-1/3 p-4 hover-scaleee">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="/src/assets/img/aben.jpg" alt="Upacara Ngaben" class="w-full h-56 object-cover">
+                        <div class="p-4 text-center">
+                            <h2 class="text-xl font-semibold">Upacara Ngaben</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- Odalan -->
+                <div class="w-full md:w-1/3 p-4 hover-scaleee">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="/src/assets/img/krisna-yuda-1KSOrHUAmZQ-unsplash.jpg" alt="Upacara Odalan" class="w-full h-56 object-cover">
+                        <div class="p-4 text-center">
+                            <h2 class="text-xl font-semibold">Upacara Odalan</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- Melasti -->
+                <div class="w-full md:w-1/3 p-4 hover-scaleee">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="/src/assets/img/dcrnfph5br1ksjgzo23y.jpg" alt="Upacara Melasti" class="w-full h-56 object-cover">
+                        <div class="p-4 text-center">
+                            <h2 class="text-xl font-semibold">Upacara Melasti</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom" class="pt-8 flex flex-col items-center justify-center md:flex-row md:justify-between">
+                <!-- Galungan dan Kuningan -->
+                <div class="w-full md:w-1/3 p-4 hover-scaleee">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="/src/assets/img/gall.jpg" alt="Upacara Galungan dan Kuningan" class="w-full h-56 object-cover">
+                        <div class="p-4 text-center">
+                            <h2 class="text-xl font-semibold">Upacara Galungan dan Kuningan</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- Upacara Metatah -->
+                <div class="w-full md:w-1/3 p-4 hover-scaleee">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="/src/assets/img/a2.jpeg" alt="Upacara Metatah" class="w-full h-56 object-cover">
+                        <div class="p-4 text-center">
+                            <h2 class="text-xl font-semibold">Upacara Metatah</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tari Kecak -->
+                <div class="w-full md:w-1/3 p-4 hover-scaleee">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="/src/assets/img/mauro-fabio-cilurzo-HRIOPiwqpmw-unsplash.jpg" alt="Tari Kecak" class="w-full h-56 object-cover">
+                        <div class="p-4 text-center">
+                            <h2 class="text-xl font-semibold">Tari Kecak</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom" class="text-center mt-2">
+                <a href="Culture.html" class=" inline-block bg-emerald-500 text-white py-3 px-6 rounded-full hover:bg-emerald-600 btn-scale">
+                    Lihat Selengkapnya
+                    <i class="pl-2 fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- End Culture-->
+    
+    <!-- Culinary -->
+    <section class="pt-14 pb-12 px-4">
+        <div class="container mx-auto">
+            <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom" class="text-5xl font-bold text-center mb-8">Explore Bali's Culinary Scene</h2>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom" class="flex flex-col items-center justify-center md:flex-row md:justify-between">
+                <!-- Babi Guling -->
+                <div class="w-full md:w-1/3 p-4 hover-scaleee">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="/src/assets/img/a2ee85031e98a59f7d921c7d185985f42399988a-864x1114.jpg" alt="Babi Guling" class="w-full h-56 object-cover">
+                        <div class="p-4 text-center">
+                            <h2 class="text-xl font-semibold">Babi Guling</h2>
+                            <p class="text-gray-600">Badung</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sate Lilit -->
+                <div class="w-full md:w-1/3 p-4 hover-scaleee">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="/src/assets/img/sate-lilit-ayam-khas-bali-1.jpeg" alt="Sate Lilit" class="w-full h-56 object-cover">
+                        <div class="p-4 text-center">
+                            <h2 class="text-xl font-semibold">Sate Lilit</h2>
+                            <p class="text-gray-600">Tabanan</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Lawar -->
+                <div class="w-full md:w-1/3 p-4 hover-scaleee">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="/src/assets/img/e1b8a3b5-76af-451f-b5bd-f94b054cf687.jpg" alt="Lawar" class="w-full h-56 object-cover">
+                        <div class="p-4 text-center">
+                            <h2 class="text-xl font-semibold">Lawar</h2>
+                            <p class="text-gray-600">Denpasar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom" class="flex flex-col items-center justify-center md:flex-row md:justify-between">
+                <!-- Ayam Betutu -->
+                <div class="w-full md:w-1/3 p-4 hover-scaleee">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="/src/assets/img/ab_Artboard_1.jpg" alt="Ayam Betutu" class="w-full h-56 object-cover">
+                        <div class="p-4 text-center">
+                            <h2 class="text-xl font-semibold">Ayam Betutu</h2>
+                            <p class="text-gray-600">Gianyar</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tipat Cantok -->
+                <div class="w-full md:w-1/3 p-4 hover-scaleee">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="/src/assets/img/20231213-Tipat-Catok-Khas-Pulau-Dewata-yang-Enak.jpg" alt="Tipat Cantok" class="w-full h-56 object-cover">
+                        <div class="p-4 text-center">
+                            <h2 class="text-xl font-semibold">Tipat Cantok</h2>
+                            <p class="text-gray-600">Badung</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Jaje Laklak -->
+                <div class="w-full md:w-1/3 p-4 hover-scaleee">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="/src/assets/img/5f6340bfa9341.jpg" alt="Jaje Laklak" class="w-full h-56 object-cover">
+                        <div class="p-4 text-center">
+                            <h2 class="text-xl font-semibold">Jaje Laklak</h2>
+                            <p class="text-gray-600">Badung</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom" class="text-center mt-2">
+                <a href="Culinary.html" class=" inline-block bg-emerald-500 text-white py-3 px-6 rounded-full hover:bg-emerald-600 btn-scale">
+                    Lihat Selengkapnya
+                    <i class="pl-2 fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- End Culinary-->
+
+    <!-- Footer -->
+    <footer class="footer bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-white text-xl font-semibold mb-2">Contact Us</h3>
+                    <p class="text-white">Jimbaran, Kec. Kuta Selatan, Kab Badung, Bali</p>
+                    <p class="text-white">Email: info@pariwisatabali.com</p>
+                    <p class="text-white">Phone: (+62) 812 3456 7890</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-xl font-semibold mb-2">Quick Links</h3>
+                    <ul>
+                        <li><a href="Home.html" class="text-white hover-Yelowww">Home</a></li>
+                        <li><a href="Destination.html" class="text-white hover-Yelowww">Destination</a></li>
+                        <li><a href="Culture.html" class="text-white hover-Yelowww">Culture</a></li>
+                        <li><a href="Culinary.html" class="text-white hover-Yelowww">Culinary</a></li>
+                        <li><a href="About us.html" class="text-white hover-Yelowww">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-xl font-semibold mb-2">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover-Yelowww"><i class="fab fa-facebook"></i> Facebook</a>
+                        <a href="#" class="text-white hover-Yelowww"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="#" class="text-white hover-Yelowww"><i class="fab fa-twitter"></i> Twitter</a>
+                        <a href="#" class="text-white hover-Yelowww"><i class="fab fa-youtube"></i> YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-white pt-4">
+                <p class="text-center text-white">&copy; 2024 Pariwisata Bali. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- JavaScript -->
+        <!-- CDN AOS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <!-- end CDN AOS -->
+        
+        <!-- Navbar -->
+        <script>
+            window.addEventListener('scroll', function() {
+                const navbar = document.getElementById('navbar');
+                if (window.scrollY > 50) {
+                    navbar.classList.remove('bg-transparent');
+                    navbar.classList.add('bg-colored');
+                } else {
+                    navbar.classList.remove('bg-colored');
+                    navbar.classList.add('bg-transparent');
+                }
+            });
+        </script>
+        <!-- Navbar -->
+        
+        <!-- contact us -->
+        <script>
+            document.getElementById('contact-link').addEventListener('click', function(e) {
+                e.preventDefault();
+                var cardContainer = document.getElementById('contact-card-container');
+                cardContainer.classList.toggle('hidden');
+            });
+            document.getElementById('close-contact').addEventListener('click', function(e) {
+                e.preventDefault();
+                var cardContainer = document.getElementById('contact-card-container');
+                cardContainer.classList.add('hidden');
+            });
+        </script>
+        <!-- end contact us -->
+    <!-- end JavaScript -->
+</body>
+</html>

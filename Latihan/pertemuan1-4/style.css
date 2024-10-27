@@ -1,0 +1,65 @@
+*{
+    padding:0%;
+    margin:0%;
+}
+
+/* =background gambar= */
+body{
+    /* background-image:url('5b15bc36-5ef1-4c05-81df-ae22b461e17d.jpg');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: round; */
+}
+
+/* div small{
+    color: blue;
+} */
+
+/* div>small{
+    color: blue;
+} */
+
+/* div+small{
+    color: blue;
+} */
+
+/* div~small{
+    color: blue;
+} */
+
+/* div1 p:first-child{
+    color: blue;
+} */
+
+div1 p:last-child{
+    color: blue;
+}
+
+div1 p:nth-child(1){
+    color: blue;
+}
+
+a:link{
+    color: blue;
+}
+
+a:visited{
+    color: red;
+}
+
+/* a:hover{
+    color: green;
+    font-size: xx-large;
+} */
+
+a:active{
+    color: green;
+    font-size: xx-large;
+}
+/* p{
+    color: aqua !important;
+}
+
+.Judul{
+    color: red;
+} */

@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: none;
+    font-family: "Poppins";
+    text-decoration: none;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #0e151b;
+    overflow-x: hidden;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    background-color: #0e151b;
+    transition: all .2s ease;
+  }
+  
+  .pembungkus-konten {
+    margin: auto;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 5px;
+  }
+  
+  .logo {
+    width: 5%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 100%;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    margin-left: 110px;
+  }
+  
+  .menu a {
+    color: #F8F9FA;
+    font-weight: 500;
+    margin-inline: 10px;
+  }
+  
+  .menu a:hover {
+    color: #5F1BBB;
+    transition: color .2s ease-in-out;
+    transform: scale(0.95);
+  }
+  
+  .login {
+    background-color: #5F1BBB;
+    color: #F8F9FA;
+    padding: 5px 40px;
+    border-radius: 35px;
+  }
+  
+  .login:hover {
+    transition: all .3s ease-in-out;
+    transform: scale(0.95);
+  }
+
+/* informasi */
+.informasi{
+    width: 95%;
+    margin: 100px auto 0;
+    box-shadow: 0px 1px #F8F9FA;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #19242E;
+}
+
+.gambar-vcd{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.gambar-vcd img{
+    width: 100%;
+}
+
+.informasi-vcd{
+    color: #F8F9FA;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 30px;
+}
+
+.informasi-vcd h2{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.informasi-vcd p{
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.materi, .fungsionaris{
+    width: 40%;
+    padding: 30px;
+}
+
+.deskripsi{
+    text-align: justify;
+    color: #F8F9FA;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.back{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F8F9FA;
+    width: 100px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #5F1BBB;
+    cursor: pointer;
+}
+
+.back a{
+    color: #F8F9FA;
+    margin-left: 10px;
+}
+
+.back:hover{
+    transition: all .2s ease;
+    transform: scale(0.95);
+}
+
+
+
+
+
+
+
+/* informasi closed */
+
+  /* footer */
+  footer{
+    background-color: #19242E;
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  .copyright{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px;
+    color: #F8F9FA;
+  }
+
+  .sosmed{
+    width: 235px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    font-size: 28px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    border-bottom: 3px solid #F8F9FA;
+  }
+
+  .sosmed a{
+    color: #F8F9FA;
+  }
+  
+  .ig:hover{
+    transition: all .2s ease-in-out;
+    transform: scale(0.95);
+    background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .tt:hover{
+    transition: all .2s ease-in-out;
+    transform: scale(0.95);
+    color: #111111;
+    filter: drop-shadow(2px 0px 0px #FD3E3E) drop-shadow(-2px -2px 0px #4DE8F4);
+  }
+  
+  .yt:hover{
+    transition: all .2s ease-in-out;
+    transform: scale(0.95);
+    color: red;
+  }
+  
+  .linked:hover{
+    transition: all .2s ease-in-out;
+    transform: scale(0.95);
+    color: #04669A;
+  }
+  

@@ -1,0 +1,28 @@
+html {
+    background-color: black;
+}
+
+div {
+    color: white;
+}
+
+body {
+    overflow: visible hidden;
+    height: 100vh;
+    width: 1000vw;
+    border: solid 1px;
+    color: white;
+}
+
+#box1 {
+    margin:25px 50px 25px 50px;
+    border:solid 1px white;
+    padding:50px;
+}
+
+#box2 {
+    height: 50px;
+    width: 50px;
+    box-sizing: border-box;
+    border:solid 1px white;
+}
